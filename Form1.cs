@@ -25,7 +25,12 @@ namespace Metody09_14
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            string s = "Ahoj 5já jsem 1 matěj12";
+            int cifSoucet;
+            int cifSoucetLich;
+            int cifSoucetSud;
+            if (Pocitani.obsahujeCislici(s, out cifSoucet, out cifSoucetLich, out cifSoucetSud)) MessageBox.Show("Obsahuje číslici\nCif Sou. je: " + cifSoucet + "\nCif. Sou. Lich. je: " + cifSoucetLich + "\nCif. Sou. Sud.: " + cifSoucetSud);
+            else MessageBox.Show("Neobsahuje číslo");
         }
 
         private void button3_Click(object sender, EventArgs e)
