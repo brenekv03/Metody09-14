@@ -34,5 +34,31 @@ namespace Metody09_14
             }
             return obsahuje;  
         }
+        public static int PocetSlov1(string retezec, out string novyretezec)
+        {
+            string novyretezec1 = retezec;
+            char[] separators = { ' ' };
+            string[] s = novyretezec1.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            int pocetSlov = s.Length;
+            int i = 0;
+            while (i < retezec.Length)
+            {
+                if (char.IsNumber(retezec[i]))
+                {
+                    retezec =retezec.Remove(i, 1);
+                }
+                else ++i;
+
+            }
+            novyretezec = retezec;
+            return pocetSlov;
+        }
+        /*public static bool ObsahujeSlovo(string slovo, out string nejdelsi, out string nejkratsi)
+        {
+            if (slovo.Length > 0 && slovo != "")
+            {
+
+            }
+        }*/
     }
 }

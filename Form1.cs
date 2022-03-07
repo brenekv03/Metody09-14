@@ -35,7 +35,9 @@ namespace Metody09_14
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            string s = "Ahoj 5já jsem 1 matěj12";
+            string novyretezec = "";
+            MessageBox.Show("Počet slov je: " + Pocitani.PocetSlov1(s, out novyretezec) + "\nŘetězec bez číslic: " + novyretezec);
         }
 
         private void button4_Click(object sender, EventArgs e)
