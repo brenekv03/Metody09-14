@@ -42,7 +42,11 @@ namespace Metody09_14
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            string s = textBox1.Text;
+            string nejdelsi = "";
+            string nejkratsi = "";
+            if (Pocitani.ObsahujeSlovo(s, out nejdelsi, out nejkratsi)) MessageBox.Show("Text obsahuje slovo\nNejdelší slovo je: " + nejdelsi + "\nNejkratší slovo je: " + nejkratsi);
+            else MessageBox.Show("Žádná slova");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -51,6 +55,14 @@ namespace Metody09_14
         }
         private void button6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string s = "Ahoj 5já jsem 1 matěj12";
+            string novyretezec = "";
+            MessageBox.Show("Počet slov je: " + Pocitani.PocetSlov1(s, out novyretezec) + "\nŘetězec bez číslic: " + novyretezec);
 
         }
     }
