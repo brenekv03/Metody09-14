@@ -60,6 +60,12 @@ namespace Metody09_14
         }
         private void button6_Click(object sender, EventArgs e)
         {
+            string s1 = "Ahoj 5já jsem 1 matěj12";
+            string s2 = "Ahoj";
+            int odlisPoz = 0;
+            int prvniIndex = 0;
+            if (Pocitani.Identicke(s1, s2, out odlisPoz, out prvniIndex)) MessageBox.Show("Řetězce jsou identické");
+            else MessageBox.Show("Řetězce nejsou identické\nPočet odlišností: " + odlisPoz + "\nPrvní index odlišnosti: " + prvniIndex);
 
         }
 

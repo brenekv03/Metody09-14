@@ -117,5 +117,38 @@ namespace Metody09_14
             }
             return jeAlfanum;
         }
+        public static bool Identicke(string retezec1, string retezec2, out int odlisujiciPozice, out int indexPrvni)
+        {
+            odlisujiciPozice = 0;
+            indexPrvni = -1;
+            bool identicke = false;
+            if(retezec1==retezec2)identicke = true;
+            else
+            {
+                bool prvniOdlisnost = false;
+                identicke = false;
+                if(retezec1.Length>retezec2.Length)
+                {
+                    string pomocny = retezec1;
+                    retezec1 = retezec2;
+                    retezec2 = pomocny;
+                }
+                for(int i =0; i <retezec1.Length-1;++i)
+                {
+                    if(retezec1[i]!=retezec2[i])
+                    {
+                        odlisujiciPozice++;
+                        if(!prvniOdlisnost)
+                        {
+                            indexPrvni = i;
+                            prvniOdlisnost = true;
+                        }
+                    }
+                }
+                if (!prvniOdlisnost) indexPrvni = retezec1.Length;
+                odlisujiciPozice += (retezec2.Length - retezec1.Length);
+            }
+            return identicke;
+        }
     }
 }
