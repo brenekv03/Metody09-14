@@ -51,7 +51,12 @@ namespace Metody09_14
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            int pocVel;
+            int pocMal;
+            int pocJin;
+            string s = "Ahoj 5já jsem 1 matěj12";
+            if (Pocitani.JeAlfanum(s, out pocMal, out pocVel, out pocJin)) MessageBox.Show("Řetězec je alfanum\nPoc mal:" + pocMal + "\nPoc vel:" + pocVel + "\nPoc jin:" + pocJin);
+            else MessageBox.Show("Řetězec není alfanumerický\nPoc mal:" + pocMal + "\nPoc vel:" + pocVel + "\nPoc jin:" + pocJin);
         }
         private void button6_Click(object sender, EventArgs e)
         {
@@ -60,7 +65,7 @@ namespace Metody09_14
 
         private void button7_Click(object sender, EventArgs e)
         {
-            string s = "Ahoj 5já jsem 1 matěj12";
+            string s = "Ahoj5jájsem 1matěj12";
             string novyretezec = "";
             MessageBox.Show("Počet slov je: " + Pocitani.PocetSlov1(s, out novyretezec) + "\nŘetězec bez číslic: " + novyretezec);
 

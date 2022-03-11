@@ -98,15 +98,24 @@ namespace Metody09_14
             }
             return obsahujeSlovo;
         }
-        /*public static bool JeAlfanum(string retezec, out int pocMal, out int pocVel, out int pocJin)
+        public static bool JeAlfanum(string retezec, out int pocMal, out int pocVel, out int pocJin)
         {
-
+            pocMal = 0;
+            pocVel = 0;
+            pocJin = 0;
+            bool jeAlfanum = true;
             for(int i = 0; i < retezec.Length;i++)
             {
-                if (char.IsNumber(retezec[i]))
-                    else if (char.IsLower(retezec[i])) pocMal++;
-                        else if (char.IsUpper(retezec[i])) pocVel++;
+                if (char.IsNumber(retezec[i])) jeAlfanum = true;
+                else if (char.IsLower(retezec[i])) pocMal++;
+                else if (char.IsUpper(retezec[i])) pocVel++;
+                else
+                {
+                    jeAlfanum = false;
+                    pocJin++;
+                }
             }
-        }*/
+            return jeAlfanum;
+        }
     }
 }
