@@ -106,7 +106,7 @@ namespace Metody09_14
             bool jeAlfanum = true;
             for(int i = 0; i < retezec.Length;i++)
             {
-                if (char.IsNumber(retezec[i])) jeAlfanum = true;
+                if (char.IsNumber(retezec[i])) { }
                 else if (char.IsLower(retezec[i])) pocMal++;
                 else if (char.IsUpper(retezec[i])) pocVel++;
                 else
